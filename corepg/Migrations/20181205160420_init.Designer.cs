@@ -10,7 +10,7 @@ using corepg.Data;
 namespace corepg.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20181204182406_init")]
+    [Migration("20181205160420_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

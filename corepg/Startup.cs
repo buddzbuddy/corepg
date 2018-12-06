@@ -44,7 +44,7 @@ namespace corepg
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env/*, ApplicationDbContext context*/)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ApplicationDbContext context)
         {
             if (env.IsDevelopment())
             {
@@ -64,7 +64,8 @@ namespace corepg
 
             app.UseAuthentication();
 
-            //context.Database.Migrate();
+            //Initialize Identity entities
+            context.Database.Migrate();
 
             app.UseMvc(routes =>
             {
